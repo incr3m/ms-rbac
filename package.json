@@ -1,0 +1,25 @@
+{
+  "name": "ms-rbac",
+  "version": "1.0.0",
+  "description": "",
+  "main": "module/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/incr3m/ms-rbac.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/incr3m/ms-rbac/issues"
+  },
+  "homepage": "https://github.com/incr3m/ms-rbac#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "easy-rbac": "^3.1.0",
+    "express": "^4.16.3"
+  }
+}

@@ -1,0 +1,14 @@
+###
+
+GET https://example.com/topics/1 HTTP/1.1
+
+###
+
+POST http://localhost:3000/can HTTP/1.1
+content-type: application/json
+
+{
+	"role":["user"],
+	"operation": "post.create",
+	"params":{}
+}

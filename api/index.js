@@ -1,9 +1,21 @@
+const { rbacServer } = require('./config')
+const axios = require('axios')
 
-function testFn(hello){
-    console.log('hello')//TRACE
-    console.log(hello)//TRACE
+async function middleware(req, res, next) {
+    console.log('LOGGED')
+    next()
+}
+
+async function can(role, operation, params){
+    const { data } = await axios.post(`http://${rbacServer}/can`, {
+        role,
+        operation,
+        params
+    })
+    return data;
 }
 
 module.exports = {
-    testFn
+    can,
+    middleware
 }

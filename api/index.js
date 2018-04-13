@@ -1,9 +1,11 @@
 const { rbacServer } = require('./config')
 const axios = require('axios')
 
-async function middleware(req, res, next) {
-    console.log('LOGGED')
-    next()
+function middleware(roles){
+    return async function (req, res, next) {
+        console.log('LOGGED')
+        next()
+    }  
 }
 
 async function can(role, operation, params){
